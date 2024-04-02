@@ -1,0 +1,20 @@
+package rafaeldomeniciApp;
+
+import spark.Spark;
+
+public class App {
+	
+	public static void main(String[] args) {
+		String nome = "Rafael Domenici";
+		Spark.port(8080);
+        Spark.get("/hello", (req, res) -> {
+        	String conteudo = "<table>";
+        	 
+        	conteudo += "<tr> <th>Nome</th> <th>Idade</th> <th>Telefone</th> </tr>";
+        			
+        	return conteudo;
+        	
+        });
+        Spark.get("/rafael", (req, res) -> nome );
+    }
+}

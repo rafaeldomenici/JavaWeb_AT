@@ -1,0 +1,47 @@
+package lojaApp.controller;
+
+import com.google.gson.Gson;
+
+import lojaApp.model.domain.ItemEstoque;
+import lojaApp.model.domain.Venda;
+import lojaApp.model.service.ItemEstoqueService;
+import lojaApp.model.service.VendaService;
+import spark.Route;
+
+public class VendaController {
+	
+	public static Route obterLista = (req, res) -> {
+		
+		return VendaService.obterLista();
+	};
+	
+	public static Route incluir = (req, res) -> {
+		
+		
+		
+		Venda venda = new Gson().fromJson(req.body(), Venda.class);
+		
+		VendaService.incluir(venda);
+		
+		return "Inclusão realizada com sucesso: "+venda+"!";
+	};
+	
+	public static Route excluir = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		Venda venda = VendaService.obterPorId(index);		
+
+		VendaService.excluir(index);		
+		
+		return "Exclusão realizada com sucesso: "+venda+"!";
+	};
+	
+	public static Route obter = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+				
+				
+		return VendaService.obterPorId(index);
+	};
+}

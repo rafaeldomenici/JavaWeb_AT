@@ -1,0 +1,41 @@
+package lojaApp.model.domain;
+
+import java.util.ArrayList;
+
+public class Cliente extends Pessoa{
+	
+	private String telefone;
+	private ArrayList<Venda> vendas = new ArrayList<Venda>();
+	public Cliente(int id, String nome, Endereco endereco, String telefone, ArrayList<Venda> vendas) {
+		super(id, nome, endereco);
+		this.telefone = telefone;
+		this.vendas = vendas;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public ArrayList<Venda> getVendas() {
+		return vendas;
+	}
+	public void setVendas(ArrayList<Venda> vendas) {
+		this.vendas = vendas;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente [telefone=" + telefone + ", vendas=" + vendas + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

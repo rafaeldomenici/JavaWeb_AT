@@ -1,0 +1,55 @@
+package lojaApp.controller;
+
+import com.google.gson.Gson;
+
+import lojaApp.model.domain.Roupa;
+import lojaApp.model.domain.Venda;
+import lojaApp.model.service.RoupaService;
+
+import spark.Route;
+
+public class RoupaController {
+	
+	public static Route obterLista = (req, res) -> {
+		
+		return RoupaService.obterLista();
+	};
+	
+	public static Route incluir = (req, res) -> {
+		
+		
+		
+		Roupa roupa = new Gson().fromJson(req.body(), Roupa.class);
+		
+		RoupaService.incluir(roupa);
+		
+		return "Inclusão realizada com sucesso: "+roupa+"!";
+	};
+	
+	public static Route excluir = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		Roupa roupa = RoupaService.obterPorId(index);		
+
+		RoupaService.excluir(index);		
+		
+		return "Exclusão realizada com sucesso: "+roupa+"!";
+	};
+	
+	public static Route obter = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+				
+				
+		return RoupaService.obterPorId(index);
+	};
+	
+	public static Route substituir = (req,res) -> {
+		Roupa roupa = new Gson().fromJson(req.body(), Roupa.class);
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		RoupaService.substituir(index, roupa);
+		return "Substituição realizada com sucesso";
+	};
+}

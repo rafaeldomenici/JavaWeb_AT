@@ -1,0 +1,73 @@
+package lojaApp.controller;
+
+import java.util.Collection;
+
+import com.google.gson.Gson;
+
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.ItemEstoque;
+import lojaApp.model.domain.Venda;
+import lojaApp.model.service.EnderecoService;
+import lojaApp.model.service.ItemEstoqueService;
+import lojaApp.model.service.VendaService;
+import spark.Route;
+
+public class VendaController {
+	
+	public static Route obterLista = (req, res) -> {
+		
+		return VendaService.obterLista();
+	};
+	
+	public static Route incluir = (req, res) -> {
+		
+		
+		
+		Venda venda = new Gson().fromJson(req.body(), Venda.class);
+		
+		VendaService.incluir(venda);
+		
+		return "Inclusão realizada com sucesso: "+venda+"!";
+	};
+	
+	public static Route excluir = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		Venda venda = VendaService.obterPorId(index);		
+
+		VendaService.excluir(index);		
+		
+		return "Exclusão realizada com sucesso: "+venda+"!";
+	};
+	
+	public static Route obter = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+				
+				
+		return VendaService.obterPorId(index);
+	};
+	
+	public static Route substituir = (req,res) -> {
+		Venda venda = new Gson().fromJson(req.body(), Venda.class);
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		VendaService.substituir(index, venda);
+		return "Substituição realizada com sucesso";
+	};
+	
+	public static Route exibirLista = (req, res) -> {
+		Collection<Venda> vendas = VendaService.obterLista();
+    	String conteudo = "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" integrity=\"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN\" crossorigin=\"anonymous\">";
+    	conteudo += "<style>table { margin-top: 150px;}</style>";
+    	
+        conteudo += "<table class='table table-striped table-dark'>";
+    	conteudo += "<tr> <th>Id</th> <th>Forma de pagamento</th> <th>Roupas da venda</th></tr>";
+    	for(Venda venda : vendas) {
+    		conteudo += "<tr> <td>"+venda.getId()+"</td> <td>"+venda.getFormaPagamento()+"</td> <td>"+venda.getListaRoupas()+"</td> </tr>";
+    	}
+    	conteudo += "</table>";
+    	return conteudo;
+	};
+}

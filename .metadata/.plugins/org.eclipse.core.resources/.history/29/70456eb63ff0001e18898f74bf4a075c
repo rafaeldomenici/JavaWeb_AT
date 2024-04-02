@@ -1,0 +1,44 @@
+package lojaApp;
+
+import java.util.Collection;
+
+import lojaApp.controller.EnderecoController;
+import lojaApp.controller.ItemEstoqueController;
+import lojaApp.controller.VendaController;
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.ItemEstoque;
+
+import lojaApp.model.service.EnderecoService;
+import spark.Spark;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		Spark.port(8080);
+        Spark.get("/endereco/listarHTML", EnderecoController.exibirLista);
+        	
+        	
+      
+        Spark.get("/endereco/lista", EnderecoController.obterLista);
+		Spark.post("/endereco/incluir", EnderecoController.incluir);
+		Spark.delete("/endereco/:id/excluir", EnderecoController.excluir);
+		Spark.get("/endereco/:id", EnderecoController.obter);
+		Spark.put("/endereco/:id/substituir", EnderecoController.substituir);
+		
+		 Spark.get("/venda/lista", VendaController.obterLista);
+		 Spark.post("/venda/incluir", VendaController.incluir);
+		 Spark.delete("/venda/:id/excluir", VendaController.excluir);
+		 Spark.get("/venda/:id", VendaController.obter);
+		 Spark.put("/venda/:id/substituir", VendaController.substituir);
+		 
+		 Spark.get("/itemEstoque/lista", ItemEstoqueController.obterLista);
+		 Spark.post("/itemEstoque/incluir", ItemEstoqueController.incluir);
+		 Spark.delete("/itemEstoque/:id/excluir", ItemEstoqueController.excluir);
+		 Spark.get("/itemEstoque/:id", ItemEstoqueController.obter);
+		 Spark.put("/itemEstoque/:id/substituir", ItemEstoqueController.substituir);
+		 
+		
+		
+    }
+}

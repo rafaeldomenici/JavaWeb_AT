@@ -1,0 +1,23 @@
+INDEX VERSION 1.134+C:\Users\User\Desktop\infnet\JavaWeb_AT\.metadata\.plugins\org.eclipse.jdt.core
+218632720.index
+1098396966.index
+1909443429.index
+525315733.index
+67447373.index
+2379134719.index
+4070798765.index
+902946917.index
+4058055703.index
+145173608.index
+3194753783.index
+1102029376.index
+454788426.index
+1865797976.index
+2678923829.index
+2049989261.index
+1134576376.index
+985749750.index
+3536944719.index
+4069617600.index
+3182108901.index
+2364950021.index

@@ -1,0 +1,42 @@
+package lojaApp.controller;
+
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.service.EnderecoService;
+import spark.Route;
+
+public class EnderecoController {
+public static Route obterLista = (req, res) -> {
+		
+		return EnderecoService.obterLista();
+	};
+	
+	public static Route incluir = (req, res) -> {
+		
+		
+		
+		Endereco endereco = new Endereco();
+		
+		EnderecoService.incluir(endereco);
+		
+		return "Inclusão realizada com sucesso: "+endereco+"!";
+	};
+	
+	public static Route excluir = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		Endereco endereco = EnderecoService.obterPorId(index);		
+
+		EnderecoService.excluir(index);		
+		
+		return "Exclusão realizada com sucesso: "+endereco+"!";
+	};
+	
+	public static Route obter = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+				
+				
+		return EnderecoService.obterPorId(index);
+	};
+}

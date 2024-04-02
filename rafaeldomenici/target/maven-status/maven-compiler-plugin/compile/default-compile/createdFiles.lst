@@ -1,0 +1,8 @@
+lojaApp\controller\EnderecoController.class
+lojaApp\model\domain\Venda.class
+lojaApp\model\service\EnderecoService.class
+lojaApp\model\domain\Endereco.class
+lojaApp\model\domain\ItemEstoque.class
+lojaApp\App.class
+lojaApp\model\domain\Roupa.class
+lojaApp\model\domain\Cliente.class

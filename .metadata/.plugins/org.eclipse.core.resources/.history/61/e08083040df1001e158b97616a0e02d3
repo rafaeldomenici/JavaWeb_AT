@@ -1,0 +1,56 @@
+package lojaApp.controller;
+
+import com.google.gson.Gson;
+
+import lojaApp.model.domain.Cliente;
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.ItemEstoque;
+import lojaApp.model.service.ClienteService;
+import lojaApp.model.service.EnderecoService;
+import lojaApp.model.service.ItemEstoqueService;
+import spark.Route;
+
+public class ItemEstoqueController {
+	public static Route obterLista = (req, res) -> {
+		
+		return ItemEstoqueService.obterLista();
+	};
+	
+	public static Route incluir = (req, res) -> {
+		
+		
+		
+		ItemEstoque itemEstoque = new Gson().fromJson(req.body(), ItemEstoque.class);
+		
+		ItemEstoqueService.incluir(itemEstoque);
+		
+		return "Inclusão realizada com sucesso: "+itemEstoque+"!";
+	};
+	
+	public static Route excluir = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		ItemEstoque itemEstoque = ItemEstoqueService.obterPorId(index);		
+
+		ItemEstoqueService.excluir(index);		
+		
+		return "Exclusão realizada com sucesso: "+itemEstoque+"!";
+	};
+	
+	public static Route obter = (req, res) -> {
+		
+		Integer index = Integer.valueOf(req.params("id"));
+				
+				
+		return ItemEstoqueService.obterPorId(index);
+	};
+	
+	public static Route substituir = (req,res) -> {
+		ItemEstoque itemEstoque = new Gson().fromJson(req.body(), ItemEstoque.class);
+		Integer index = Integer.valueOf(req.params("id"));
+		
+		ItemEstoqueService.substituir(index, itemEstoque);
+		return "Substituição realizada com sucesso";
+	};
+}

@@ -1,0 +1,65 @@
+package lojaApp.model.domain;
+
+import java.util.ArrayList;
+
+public class Pessoa {
+	private int id;
+	private String nome;
+	private Endereco endereco;
+	private ArrayList<Venda> listaVendas = new ArrayList<Venda>();
+	
+	
+	
+	public Pessoa(int id, String nome, Endereco endereco, ArrayList<Venda> listaVendas) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.listaVendas = listaVendas;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public ArrayList<Venda> getListaVendas() {
+		return listaVendas;
+	}
+
+	public void setListaVendas(ArrayList<Venda> listaVendas) {
+		this.listaVendas = listaVendas;
+	}
+
+	@Override
+	public String toString() {
+		return "[id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", listaVendas=" + listaVendas + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

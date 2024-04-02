@@ -1,0 +1,12 @@
+package rafaeldomeniciApp;
+
+import spark.Spark;
+
+public class App {
+	
+	public static void main(String[] args) {
+		Spark.port(8080);
+        Spark.get("/hello", (req, res) -> "teste");
+        Spark.get("/rafael", (req, res) -> "deu ceeeeertoooo!" );
+    }
+}

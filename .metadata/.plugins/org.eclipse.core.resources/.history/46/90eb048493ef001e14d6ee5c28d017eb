@@ -1,0 +1,5 @@
+package lojaApp.controller;
+
+public class ClienteController {
+
+}

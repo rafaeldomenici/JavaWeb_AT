@@ -1,0 +1,760 @@
+{
+	"info": {
+		"_postman_id": "a1057407-30d9-4819-972e-c6940072cc66",
+		"name": "api-loja-at",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23156022"
+	},
+	"item": [
+		{
+			"name": "Endereco",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Canção\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Amélia\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/endereco/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Ciranda\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Amélia\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/endereco/1/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"1",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venda",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Branca\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Preta\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/venda/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venda",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/venda/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venda",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/venda/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venda",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/venda/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venda",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Preta\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Azul\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/venda/2/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venda",
+								"2",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ItemEstoque",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/itemEstoque/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itemEstoque",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/itemEstoque/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itemEstoque",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 21,\r\n    \"quantidade\": 7,\r\n    \"roupa\": {\r\n        \"id\": 7,\r\n        \"nome\": \"Vestido Vermelho\",\r\n        \"tamanho\": \"P\",\r\n        \"valor\": 180.0,\r\n        \"genero\": \"Roupa Feminina\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/itemEstoque/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itemEstoque",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/itemEstoque/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itemEstoque",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 21,\r\n    \"quantidade\": 20,\r\n    \"roupa\": {\r\n        \"id\": 7,\r\n        \"nome\": \"Vestido Preto\",\r\n        \"tamanho\": \"P\",\r\n        \"valor\": 180.0,\r\n        \"genero\": \"Roupa Feminina\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/itemEstoque/2/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"itemEstoque",
+								"2",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 25,\r\n    \"nome\": \"José\",\r\n    \"endereco\": {\r\n        \"id\": null,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Doutor Hiran Amaral\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Amélia\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n    },\r\n    \"telefone\": \"12345678\",\r\n    \"listaVendas\": [{\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Branca\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Azul\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 25,\r\n    \"nome\": \"João\",\r\n    \"endereco\": {\r\n        \"id\": null,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Doutor Amaral\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Amélia\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n    },\r\n    \"telefone\": \"12345678\",\r\n    \"listaVendas\": [{\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Branca\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Azul\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/1/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 25,\r\n    \"nome\": \"José\",\r\n    \"endereco\": {\r\n        \"id\": null,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Doutor Hiran Amaral\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Amélia\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n    },\r\n    \"salario\": 1500.0,\r\n    \"listaVendas\": [{\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Branca\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Azul\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/funcionario/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/funcionario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/funcionario/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 25,\r\n    \"nome\": \"João\",\r\n    \"endereco\": {\r\n        \"id\": null,\r\n        \"cep\": \"31560-360\",\r\n        \"logradouro\": \"Rua Doutor Hiran Amaral\",\r\n        \"complemento\": \"\",\r\n        \"bairro\": \"Santa Branca\",\r\n        \"localidade\": \"Belo Horizonte\",\r\n        \"uf\": \"MG\"\r\n    },\r\n    \"salario\": 1500.0,\r\n    \"listaVendas\": [{\r\n        \"id\": 7,\r\n        \"formaPagamento\": \"Cartão de crédito\",\r\n        \"listaRoupas\": [\r\n            {\r\n                \"id\": 3,\r\n                \"nome\": \"Camisa Branca\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 160.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nome\": \"Camisa Azul\",\r\n                \"tamanho\": \"M\",\r\n                \"valor\": 180.0,\r\n                \"genero\": \"Roupa Masculina\"\r\n            }\r\n        ]\r\n    }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/funcionario/3/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"3",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roupa",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": \"Camiseta Branca\",\r\n    \"tamanho\": \"M\",\r\n    \"valor\": 150.0,\r\n    \"genero\": \"Roupa Masculina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roupa/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roupa",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/roupa/lista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roupa",
+								"lista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/roupa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roupa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/roupa/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roupa",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "substituir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nome\": \"Camiseta Azul\",\r\n    \"tamanho\": \"M\",\r\n    \"valor\": 150.0,\r\n    \"genero\": \"Roupa Masculina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/roupa/2/substituir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roupa",
+								"2",
+								"substituir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

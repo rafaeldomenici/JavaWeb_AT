@@ -1,0 +1,40 @@
+package lojaApp.model.domain;
+
+import java.util.ArrayList;
+
+public class Funcionario extends Pessoa{
+	
+	private float salario;
+	private ArrayList<Venda> vendas = new ArrayList<Venda>();
+	
+	public float getSalario() {
+		return salario;
+	}
+
+	public void setSalario(float salario) {
+		this.salario = salario;
+	}
+
+	public ArrayList<Venda> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(ArrayList<Venda> vendas) {
+		this.vendas = vendas;
+	}
+
+	public Funcionario(int id, String nome, Endereco endereco, float salario, ArrayList<Venda> vendas) {
+		super(id, nome, endereco);
+		this.salario = salario;
+		this.vendas = vendas;
+	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [salario=" + salario + ", vendas=" + vendas + "]";
+	}
+	
+	
+	
+	
+}

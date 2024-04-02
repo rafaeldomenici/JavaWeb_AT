@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="spark.Spark"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.EnderecoController"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.Endereco"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.EnderecoService"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.ClienteService"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.RoupaAdulto"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.ItemEstoqueService"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.VendaService"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.VendaController"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.ItemEstoque"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.ItemEstoqueController"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.ClienteController"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.FuncionarioService"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.Funcionario"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.FuncionarioController"/>
+    <fullyQualifiedTypeName name="lojaApp.model.service.RoupaService"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.Roupa"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.RoupaController"/>
+    <fullyQualifiedTypeName name="spark.Response"/>
+    <fullyQualifiedTypeName name="spark.Route"/>
+    <fullyQualifiedTypeName name="spark.Request"/>
+    <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="lojaApp.controller.ViaCepController"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.Venda"/>
+    <fullyQualifiedTypeName name="lojaApp.model.domain.Cliente"/>
+</qualifiedTypeNameHistroy>

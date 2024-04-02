@@ -1,0 +1,51 @@
+package lojaApp.model.service;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.gson.Gson;
+
+import lojaApp.model.domain.Cliente;
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.Venda;
+import spark.Route;
+
+public class VendaService {
+
+	
+	private static Map<Integer, Venda> vendas = new HashMap<Integer, Venda>();
+	
+	private static Integer id = 0;
+	
+	public static void incluir(Venda venda) {
+		
+		venda.setId(++id);
+		
+		vendas.put(venda.getId(), venda);
+	}
+
+	public static void excluir(Integer id) {
+		vendas.remove(id);
+	}
+	
+	public static Collection<Venda> obterLista() {
+		return vendas.values();
+	}
+	
+	public static Venda obterPorId(Integer id) {
+		return vendas.get(id);
+	}
+	
+	public static void substituir(Integer id, Venda venda) {
+		vendas.replace(id, venda);
+	}
+	
+	
+	
+	
+	
+}
+		
+	
+

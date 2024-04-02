@@ -1,0 +1,75 @@
+package lojaApp;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import lojaApp.controller.ClienteController;
+import lojaApp.controller.EnderecoController;
+import lojaApp.controller.FuncionarioController;
+import lojaApp.controller.ItemEstoqueController;
+import lojaApp.controller.RoupaController;
+import lojaApp.controller.VendaController;
+import lojaApp.controller.ViaCepController;
+import lojaApp.model.domain.Cliente;
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.ItemEstoque;
+import lojaApp.model.domain.Venda;
+import lojaApp.model.service.EnderecoService;
+import spark.Spark;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		Spark.port(8080);
+        Spark.get("/endereco/listarHTML", EnderecoController.exibirLista);
+        Spark.get("/venda/listarHTML", VendaController.exibirLista);
+        Spark.get("/cliente/listarHTML", ClienteController.exibirLista);
+        Spark.get("/funcionario/listarHTML", FuncionarioController.exibirLista);
+        Spark.get("/roupa/listarHTML", RoupaController.exibirLista);
+        Spark.get("/itemEstoque/listarHTML", ItemEstoqueController.exibirLista);
+        	
+        Spark.get("/", (req, res) -> {return App.class.getResourceAsStream("/index.html");});	
+      
+        Spark.get("/endereco/lista", EnderecoController.obterLista);
+		Spark.post("/endereco/incluir", EnderecoController.incluir);
+		Spark.delete("/endereco/:id/excluir", EnderecoController.excluir);
+		Spark.get("/endereco/:id", EnderecoController.obter);
+		Spark.put("/endereco/:id/substituir", EnderecoController.substituir);
+		
+		 Spark.get("/venda/lista", VendaController.obterLista);
+		 Spark.post("/venda/incluir", VendaController.incluir);
+		 Spark.delete("/venda/:id/excluir", VendaController.excluir);
+		 Spark.get("/venda/:id", VendaController.obter);
+		 Spark.put("/venda/:id/substituir", VendaController.substituir);
+		 
+		 Spark.get("/itemEstoque/lista", ItemEstoqueController.obterLista);
+		 Spark.post("/itemEstoque/incluir", ItemEstoqueController.incluir);
+		 Spark.delete("/itemEstoque/:id/excluir", ItemEstoqueController.excluir);
+		 Spark.get("/itemEstoque/:id", ItemEstoqueController.obter);
+		 Spark.put("/itemEstoque/:id/substituir", ItemEstoqueController.substituir);
+		 
+		 Spark.get("/cliente/lista", ClienteController.obterLista);
+		 Spark.post("/cliente/incluir", ClienteController.incluir);
+		 Spark.delete("/cliente/:id/excluir", ClienteController.excluir);
+		 Spark.get("/cliente/:id", ClienteController.obter);
+		 Spark.put("/cliente/:id/substituir", ClienteController.substituir);
+		 
+		 Spark.get("/funcionario/lista", FuncionarioController.obterLista);
+		 Spark.post("/funcionario/incluir", FuncionarioController.incluir);
+		 Spark.delete("/funcionario/:id/excluir", FuncionarioController.excluir);
+		 Spark.get("/funcionario/:id", FuncionarioController.obter);
+		 Spark.put("/funcionario/:id/substituir", FuncionarioController.substituir);
+		 
+		 Spark.get("/roupa/lista", RoupaController.obterLista);
+		 Spark.post("/roupa/incluir", RoupaController.incluir);
+		 Spark.delete("/roupa/:id/excluir", RoupaController.excluir);
+		 Spark.get("/roupa/:id", RoupaController.obter);
+		 Spark.put("/roupa/:id/substituir", RoupaController.substituir);
+		 
+		 Spark.get("/viacep/:cep", ViaCepController.getAdress);
+		 
+		 
+		
+    }
+}

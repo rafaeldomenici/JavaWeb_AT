@@ -1,0 +1,30 @@
+package lojaApp;
+
+import java.util.Collection;
+
+import lojaApp.controller.EnderecoController;
+import lojaApp.model.domain.Endereco;
+import lojaApp.model.domain.RoupaAdulto;
+import lojaApp.model.service.EnderecoService;
+import spark.Spark;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		Spark.port(8080);
+        Spark.get("/endereco/listarHTML", EnderecoController.exibirLista);
+        	
+        	
+      
+        Spark.get("/endereco/lista", EnderecoController.obterLista);
+		Spark.post("/endereco/incluir", EnderecoController.incluir);
+		Spark.delete("/endereco/:id/excluir", EnderecoController.excluir);
+		Spark.get("/endereco/:id", EnderecoController.obter);
+		
+		RoupaAdulto roupaAdulto = new RoupaAdulto();
+		roupaAdulto.setTamanho('G');
+		roupaAdulto.setValor(500);
+		System.out.println(roupaAdulto.valorComDesconto());
+    }
+}

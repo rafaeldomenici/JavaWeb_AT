@@ -1,0 +1,17 @@
+package lojaApp.model.domain;
+
+public class RoupaAdulto extends Roupa{
+	
+	
+	public float valorComDesconto() {
+		if(super.getTamanho() == 'G') {
+			return super.getValor()*0.9f;
+		}
+		else if(super.getTamanho() == 'M') {
+			return super.getValor()*0.95f;
+		}
+		else {
+			return super.getValor();
+		}
+	}
+}

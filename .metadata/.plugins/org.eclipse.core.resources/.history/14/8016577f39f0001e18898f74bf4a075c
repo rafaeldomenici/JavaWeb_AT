@@ -1,0 +1,21 @@
+package lojaApp.model.domain;
+
+public class RoupaInfantil extends Roupa{
+	
+	private int tamanho;
+	
+	public float valorComDesconto() {
+		if(tamanho == 10) {
+			return super.getValor()*0.9f;
+		}
+		else if(tamanho == 12) {
+			return super.getValor()*0.95f;
+		}
+		else {
+			return super.getValor();
+		}
+	}
+	
+	
+
+}

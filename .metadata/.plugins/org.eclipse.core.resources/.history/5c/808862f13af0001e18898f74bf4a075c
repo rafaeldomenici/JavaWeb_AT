@@ -1,0 +1,79 @@
+package lojaApp.model.domain;
+
+public abstract class Roupa {
+	private int id;
+	private String nome;
+	
+	private float valor;
+	private String genero;
+	
+	public Roupa() {
+		
+	}
+	
+	
+	public Roupa(int id, String nome, float valor, String genero) {
+		
+		this.id = id;
+		this.nome = nome;
+		
+		this.valor = valor;
+		this.genero = genero;
+	}
+
+
+	public abstract float valorComDesconto();
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	
+
+
+	public float getValor() {
+		return valor;
+	}
+
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+
+	public String getGenero() {
+		return genero;
+	}
+
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Roupa [id=" + id + ", nome=" + nome + ", valor=" + valor + ", genero=" + genero + "]";
+	}
+
+
+	
+	
+}
